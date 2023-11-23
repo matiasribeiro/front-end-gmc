@@ -1,0 +1,50 @@
+<nb-card>
+  <nb-card-body>
+
+    <table [nbTreeGrid]="data" equalColumnsWidth>
+
+      <tr nbTreeGridHeaderRow *nbTreeGridHeaderRowDef="allColumns"></tr>
+      <tr nbTreeGridRow *nbTreeGridRowDef="let row; columns: allColumns"></tr>
+
+
+      <ng-container nbTreeGridColumnDef="name">
+        <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>Nome do Repositorio</th>
+        <td nbTreeGridCell *nbTreeGridCellDef="let row">
+
+          {{row.data.name}}
+
+        </td>
+      </ng-container>
+
+      <ng-container nbTreeGridColumnDef="loginGitHub" [hideOn]="600">
+        <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>Login</th>
+        <td nbTreeGridCell *nbTreeGridCellDef="let row">
+
+
+                <nb-user class="iconUsuario" shape="round" size="large" [name]=row.data.loginGitHub [picture]="row.data.urlAvatar" ></nb-user>
+
+
+
+        </td>
+      </ng-container>
+
+      <ng-container nbTreeGridColumnDef="quantidadeAlteracaoEnviadas" [hideOn]="1000">
+        <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>Quantidade de Atividades</th>
+        <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data.quantidadeAlteracaoEnviadas || '-'}}</td>
+      </ng-container>
+
+      <ng-container nbTreeGridColumnDef="url" [showOn]="1200">
+        <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>URL</th>
+        <td nbTreeGridCell *nbTreeGridCellDef="let row">
+          <a _ngcontent-iua-c256="" [href]="row.data.url" target="_blank" class="ion ion-social-github"></a>
+          {{row.data.url || '-'}}
+        </td>
+      </ng-container>
+
+    </table>
+
+  </nb-card-body>
+</nb-card>
+
+
+

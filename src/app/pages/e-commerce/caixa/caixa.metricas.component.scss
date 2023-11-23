@@ -1,0 +1,98 @@
+@import '../../../@theme/styles/themes';
+@import '~@nebular/theme/styles/global/breakpoints';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+@include nb-install-component() {
+
+  nb-card-body {
+    overflow: hidden;
+  }
+
+  .echart {
+    position: absolute;
+    left: 1em;
+    height: calc(100% - 2 * 1rem);
+    width: 40%;
+  }
+
+  .info {
+    margin-left: 45%;
+    padding-top: 1rem;
+  }
+
+  .value {
+    margin: 0;
+  }
+
+  .details {
+    color: nb-theme(text-hint-color);
+  }
+
+  .nb-card.solar-card.size-tiny {
+    height: 82%;
+  }
+
+  .icones-v {
+    text-align: right;
+    size: 20px;
+    font-size: 1.5em;
+    display: inline;
+    float: right;
+    color: #57dbfc;
+  }
+  .h4.value.commits {
+    color: #57dbfc;
+    text-align: center;
+  }
+
+  .icones-m {
+    text-align: right;
+    size: 20px;
+    font-size: 1.5em;
+    display: inline;
+    float: right;
+    color: #a4b320;
+  }
+  .h4.value.issue {
+    color: #a4b320;
+    text-align: center;
+  }
+
+  .icones-l {
+    text-align: right;
+    size: 20px;
+    font-size: 1.5em;
+    display: inline;
+    float: right;
+    color: #dd6b01;
+  }
+  .h4.value.eventoissue {
+    color: #dd6b01;
+    text-align: center;
+  }
+
+  .icones-a {
+    text-align: right;
+    size: 20px;
+    font-size: 1.5em;
+    display: inline;
+    float: right;
+    color: #0045ff;
+  }
+
+  .h4.value.pessoas {
+    color: #0045ff;
+    text-align: center;
+}
+
+
+
+}
+
+.titulo-repositorio {
+  color: #006e0e;
+}
+
+.nome-repositorio {
+  color: #2dbb2c;
+}
